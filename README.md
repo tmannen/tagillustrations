@@ -1,4 +1,4 @@
-"# tagillustrations"
+# tagillustrations
 
 Using [illustration2vec](illustration2vec.net) to automatically tag images.
 
