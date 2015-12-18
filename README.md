@@ -4,4 +4,4 @@
 
 Example (tag was automatically generated):
 
-![Searching for 'holo' from the tags](examples/example.png?raw=true "i2v correctly tags these images")
+![Searching for 'holo' from the tags](examples/examplepic.png?raw=true "i2v correctly tags these images")
