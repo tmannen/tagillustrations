@@ -1,0 +1,19 @@
+{% extends "results.html" %}
+
+{% block content %}
+
+<form method="POST" action="{{ url_for('search') }}" accept-charset="UTF-8">
+<input name="search_input" type="text" value="{{search_term}}" class="search_bar">
+<input type="submit" value="Search" class="search_button">
+</form>
+
+{{ amount }} images found
+
+<div class="search_container">
+{% for row in rows %}
+<div class="image_container">
+	 <a href="{{ url_for('static', filename = 'images/' + row['filename']) }}"><img src="{{ url_for('static', filename = 'images/thumbnails/thumb' + row['filename']) }}" class="image"></a>
+</div>
+{% endfor %}
+</div>
+{% endblock %}

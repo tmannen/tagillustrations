@@ -1,0 +1,16 @@
+{% extends "results.html" %}
+
+{% block content %}
+
+<form method="POST" action="{{ url_for('search') }}" accept-charset="UTF-8">
+<input name="search_input" type="text" placeholder="Search tags" class="search_bar">
+<input type="submit" value="Search" class="search_button">
+</form>
+
+{{amount}} available tags:
+<br/>
+<br/>
+{% for tag in tags %}
+{{tag['tag']}},
+{% endfor %}
+{% endblock %}
