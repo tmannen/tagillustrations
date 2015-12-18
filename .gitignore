@@ -1,6 +1,6 @@
 webpage/static/images
 illustrations/
-src/move_files.py
+database/
 tags.db
 tagsbackup.txt
 tagsbackup19122015.txt

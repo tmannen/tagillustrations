@@ -1,0 +1,13 @@
+[values]
+#where illustration2vec is located
+i2vpath =
+#folder of files, used in the program to pick only images that are illustrations
+sourcefolderpath
+#where illustrations are saved
+imagefolderpath
+#where the caffe's python install is located
+caffepath
+#where database is located
+dbpath
+#used by Flask to determine where images are. default is the static folder in webpage
+staticpath
