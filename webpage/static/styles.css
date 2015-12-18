@@ -1,3 +1,9 @@
+body {
+	width: 80%;
+	text-align:center;
+	margin:auto;
+}
+
 div.image_container {
     width:256px;
     float:left;
@@ -5,6 +11,7 @@ div.image_container {
 }
 
 form {
+	margin-top:20px;
     margin-left: auto;
     margin-right: auto;
     width:700px;

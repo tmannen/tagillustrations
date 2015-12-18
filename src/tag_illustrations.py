@@ -54,7 +54,8 @@ def create_tags(illust2vec, dbname="tags.db"):
                 for tag_type in tags.keys(): #change just to id's in database?
                     for tag, prob in tags[tag_type]:
                         info = (imghash, image_name, tag, tag_type, str(prob))
-                        taglist.append(info)
+                        info = [x.encode('utf-8') for x in info]
+                        taglist.append(tuple(info))
                         #if db fails somehow.. save the tags to a file:
                         f.write(",".join(info) + "\n")
 
@@ -104,8 +105,8 @@ def detect_illustrations(illust2vec):
     #TODO: no need for file, just copy or move the files to image folder
     with open("photoprobabilities.txt", "w") as f:
         for image_name in image_names:
-            img = Image.open(sourcefolder + image_name)
             try:
+                img = Image.open(sourcefolder + image_name)
                 #IRL images often have low probabilities in everything (except rating), better to divide that way?
                 prob = illust2vec.estimate_specific_tags([img], ["photo"])[0]["photo"]
                 if prob < 0.1:
